@@ -1,0 +1,261 @@
+
+:root{
+    --alert-color: #4070f4;
+}
+.toast{
+    position: relative;
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    /* border-left: 6px solid var(--alert-color); */
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active{
+    transform: translateX(0%);
+}
+
+.toast .toast-content{
+    display: flex;
+    align-items: center;
+}
+
+.toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: var(--alert-color);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    max-width: 200px;
+}
+
+
+.message .text.text-1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.message .text.text-2{
+    font-size: 12px;
+    font-weight: 400;;
+    color: #666666;
+    line-height: 15px;
+    
+}
+
+.toast .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast .close:hover{
+    opacity: 1;
+}
+
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toast .progress:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--alert-color);
+}
+
+.progress.active:before{
+    animation: progress 2s linear forwards;
+}
+
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
+}
+
+.toast.active{
+    pointer-events: none;
+}
+
+.toast:not(.show) {
+    display: block;
+    position: fixed;
+    z-index: 9999999999;
+}
+
+
+
+
+@media (max-width: 992px) {
+    .toast{
+        top: 25px;
+        right: 30px;
+        border-radius: 12px;
+        padding: 15px 30px 15px 25px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+       
+    }
+    .message .text.text-1{
+        font-size: 20px;
+    }
+
+
+}
+@media (max-width: 768px) {
+    
+    .toast{
+        top: 25px;
+        right: 30px;
+        border-radius: 12px;
+        padding: 10px 25px 15px 23px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .message .text.text-1{
+        font-size: 18px;
+    }
+
+
+}
+@media (max-width: 576px) {
+    .toast{
+        top: 78px;
+        right: 10px;
+        width: fit-content;
+        border-radius: 12px;
+        padding: 8px 8px 10px 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .message .text.text-1{
+        font-size: 17px;
+    }
+}
+
+/* Start Detect Internet connection  */
+.connection{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 360px;
+    height: 70px;
+    background: #242526;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: 9999;
+}
+.connection p{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+}
+.connection .refreshBtn{
+    font-size: 16px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #469aff;
+}
+.connection .wifi-off{
+    margin-right: 20px;
+    font-size: 26px;
+    color: #7c7c7c;
+}
+.connection .close{
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background: #474747;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.connection .wifi{
+    color: #029702;
+    font-size: 26px;
+    margin-right: 20px;
+}
+.online.active{
+    width: 420px;
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 9999;
+}
+.offline.active{
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .connection{
+        bottom: 50px;
+        left: 50px;
+        width: fit-content !important;
+        height: 70px;
+        padding: 5px 20px;
+    }
+    .connection p{
+        font-size: 14px;
+        color: #fff;
+        font-weight: 300;
+        margin: 0;
+    }
+}
+@media (max-width: 576px) {
+    .connection{
+        bottom: 50px;
+        left: 10px;
+        width: fit-content !important;
+        height: 70px;
+        padding: 5px 10px;
+    }
+    
+    .connection p{
+        font-size: 10px;
+        color: #fff;
+        font-weight: 300;
+        margin: 0;
+    }
+}
+
+/* End Detect Internet connection  */

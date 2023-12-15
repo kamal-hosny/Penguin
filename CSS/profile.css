@@ -1,0 +1,404 @@
+.contant .container .posts{
+    flex-direction: column;
+}
+/* Start header-profile */
+.profile-big{
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+@media (max-width: 576px) {
+    .profile-big{
+        width: 100%;
+        padding-top: 150px;
+    }
+}
+.header-profile{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--main-color-alt);
+}
+
+.header-profile .container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+}
+.header-profile .container a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text);
+}
+
+.header-profile .container .back{
+    color: var(--color-text);
+    cursor: pointer;
+}
+.header-profile .container .back i{
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+}
+.header-profile .container .back i:hover{
+    background-color: var(--main-color-hover);
+    padding: 10px;
+    border-radius: 50%;
+}
+.header-profile .container .name{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* End header-profile */
+/* Start profile */
+.profile{
+    position: relative;
+    width: 600px;
+    
+}
+
+.profile  .round{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+
+.profile  i{
+    color: #212121;
+    transition: var(--main-transition);
+}
+.profile .round:hover i.fa-gear{
+    transform: rotate(45deg);
+}
+.profile  i{
+    color: #f4f7fa;
+}
+
+
+@media (max-width: 576px) {
+    .profile{
+        width: 100%;
+    }
+}
+
+.profile .container{
+    padding: 0;
+}
+.profile   img{
+    height: 300px;
+    width: 100%;
+    pointer-events: none;
+    object-fit: cover;
+}
+.profile  .profile-details{
+    position: relative;
+    display: flex;
+    background-color: var(--main-color-alt);
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+}
+.profile  .profile-details .profile-img{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    
+}
+.profile  .profile-details .profile-img img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--main-color-alt);
+}
+
+
+
+
+.profile  .profile-details .profile-img .round{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #f4f7fa;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+body.dark .profile  .profile-details .profile-img .round{
+    background-color: #212121;
+}
+
+.profile  .profile-details .profile-img .round i{
+    color: #212121;
+    transition: var(--main-transition);
+}
+body.dark .profile  .profile-details .profile-img .round i{
+    color: #f4f7fa;
+}
+.profile  .profile-details .profile-img .round:hover i{
+    color: #79808a;
+}
+
+
+
+
+.profile  .profile-details button{
+    color: var(--color-text);
+    background-color: var(--main-color-alt);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--color-text);
+}
+.profile  .profile-details button:hover{
+    background-color: var(--main-color-hover);
+}
+/* End profile */
+/* Start profile-data */
+.profile-data{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: var(--main-color-alt);
+    flex-direction: column;
+}
+.profile-data .bio{
+    padding: 5px 0;
+    color: var(--color-gray);
+    font-size: 16px;
+    overflow-wrap: break-word;
+}
+.profile-data .left{
+
+}
+.profile-data .left .user-name{
+    font-size: 20px;
+    font-size: 500;
+}
+.profile-data .right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-data .right .posts{
+}
+.profile-data .right .comments{
+    display: flex;
+    flex-direction: row;
+    padding: 0 !important;
+}
+.profile-data .right .posts span,
+.profile-data .right .comments span,
+.profile-data .right .following span{
+    color: var(--color-gray);
+    font-size: 14px;
+ 
+}
+.profile-data .right .posts span.num,
+.profile-data .right .comments span.num,
+.profile-data .right .following span.num{
+    color: var(--color-text);
+}
+/* End profile-data */
+.contant .container .posts {
+    width: 600px !important;
+        margin: 40px 0 !important;
+}
+@media (max-width: 734px) {
+    .contant .container .posts{
+        margin: 60px 0;
+    }
+}
+/* Start my-following */
+.my-following{
+    width: 600px;
+    margin: 20px auto 0;
+    background-color: var(--main-color-alt);
+    padding: 10px;
+    color:  var(--color-text);
+}
+.my-following .container-fluid{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media (max-width: 576px) {
+    .my-following{
+        width: 100%;
+    }
+}
+.my-following .following-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-following .following-header p{
+    padding: 5px 0;
+    margin: 0;
+}
+.my-following .following-header button{
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    color: #ff5b89;
+    font-weight: 500;
+}
+
+/* // */
+
+.my-following .wrapper{
+    position: relative;
+    
+}
+.my-following .wrapper i.arrow{
+    top: 50%;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color:  var(--color-text);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+body.dark .my-following .wrapper i.arrow{
+background-color: rgba(33, 33, 33, 0.4);
+}
+.wrapper i.arrow:first-child{
+    left: 23px;
+    display: none;
+}
+.wrapper i.arrow:last-child{
+    right: 23px;
+
+}
+.my-following .wrapper .carousel{
+    cursor: pointer;
+    white-space: nowrap;
+
+    background-color: var(--main-color-alt);
+   display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 0;
+    
+}
+.my-following .wrapper .carousel::-webkit-scrollbar{
+    display: none;
+}
+/* @media(max-width: 992px) {
+    .my-following .wrapper .carousel{
+        grid-auto-columns: calc((100% / 3) - 12px);
+    }
+} */
+@media(max-width: 576px) {
+    .my-following .wrapper .carousel{
+        grid-auto-columns: calc((100% / 2) - 12px);
+    }
+}
+.my-following .wrapper .carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.my-following .wrapper .carousel .card{
+    padding: 10px;
+    scroll-snap-align: start ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color-hover);
+    height: 203px;
+    
+}
+.my-following .wrapper .carousel .card .image{
+    
+    transition: var(--main-transition)  ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-following .wrapper .carousel .card .image img{
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+    /* pointer-events: none; */
+    transition: var(--main-transition)  ;
+}
+.my-following .wrapper .carousel img:first-child{
+    margin-left: 0px;
+}
+
+
+.my-following .wrapper .carousel .card p{
+    margin: 5px 0;
+    font-weight: 500;
+    color:  var(--color-text);
+}
+.my-following .wrapper .carousel .card button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ff5b89;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+   
+    
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.my-following .wrapper .carousel .card button:hover{
+    background-color: #ff306b;
+    box-shadow: #ff306b 0px 5px 20px -10px;
+}
+
+/*? hover */
+.my-following .wrapper .carousel .card:hover{
+    
+}
+.my-following .wrapper .carousel .card:hover button{
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+
+.my-following .wrapper .carousel .card:hover  img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+}
+/* end my-following */

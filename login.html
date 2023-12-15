@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IMPORT font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- IMPORT boxicons -->
+    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
+    <!-- IMPORT CSS-bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <!-- IMPORT CSS-Toast Notification -->
+    <link rel="stylesheet" href="./CSS/toast.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/loader.css">
+    <link rel="stylesheet" href="./CSS/login.css">
+    <!-- ICON -->
+    <link rel="icon" href="./img/penguin.png">
+    <title>Login | Penguin</title>
+</head>
+<body>
+    <!-- Start loader -->
+    <div class="loader">
+        <div class="banter-loader">
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+        </div>
+    </div>
+    <!-- End loader -->
+    <!-- Start Toast -->
+    <div class="toast"></div>
+    <!-- Start End -->
+    <!-- Start Detect Internet connection -->
+    <div class="connections"></div>
+    <!-- End Detect Internet connection -->
+    <span class="shap shap-1"></span>
+    <span class="shap shap-2"></span>
+    <div class="page">
+    <!-- Start logo -->
+        <a href="./index.html" class="logo">
+        <img src="./img/penguin.png" alt="">
+        <span>enguin</span>
+        </a>
+    <!-- End logo -->
+    <!-- Start login -->
+    <div class="login">
+        <div class="continer">
+            <div class="logo-container">
+                Login
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="email">Name</label>
+                    <input type="text" id="username-input" name="username" placeholder="Enter your name" required="">
+                </div>
+                <div class="form-group">
+                    <label for="email">Password</label>
+                    <input type="password" id="password-input" name="password" placeholder="Enter your password" required="">
+                    <i class="bx bx-hide show-hide"></i>
+                </div>
+                
+                <p class="form-submit-btn" onclick="LoginBtnClicked()">Login</p>
+            
+            </form>
+            <p class="register-link">
+                Don't have an account?
+                <a href="./register.html" class="register-link link"> register now</a>
+            </p>
+        </div>
+    </div>
+    <!-- End login -->
+</div>
+    <!-- Start darkmode -->
+    <div class="dark-light">
+        <i class="fa-solid fa-moon moon"></i>
+        <i class="fa-solid fa-sun sun"></i>
+    </div>
+    <!-- End darkmode -->
+    <!-- IMPORT BOOTSTRAP JS -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IMPORT AXIOS -->
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <!-- IMPORT JS-Toast Notification -->
+    <script src="./JS/toast.js"></script>
+    <!-- IMPORT JS -->
+    <script src="./JS/loader.js"></script>
+    <script src="./JS/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=League+Spartan:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&family=Rubik:wght@300;400;500;600&display=swap');
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color:#FFF;
+    --main-background:#f4f7fa;
+    --main-color-alt:#fff;
+    --color-text:#0f1419;
+
+}
+
+body.dark{
+    --main-color:#000;
+    --main-background:#18191a;
+    --main-color-alt:#242526;
+
+    --color-text:#f5f5f5;
+}
+body{
+    background-color: var(--main-background) !important;
+    position: relative;
+    overflow: hidden;
+    /* height: 100vh; */
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Start logo */
+.page{
+    position: relative;
+    top: 50%;
+    transform: translateY(9%);
+}
+.logo{
+    position: relative;
+    z-index: 99999;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    max-width: 50px;
+}
+.logo span{
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    left: -10px;
+    color: var(--color-text);
+}
+/* End logo */
+/* Start register */
+.register{
+    top: 50%;
+    /* transform: translateY(-50%); */
+    margin: 0 auto;
+    max-width: 400px;
+    background-color: var(--main-color-alt);
+    padding: 32px 24px;
+    font-size: 14px;
+    color: #212121;
+    border-radius: 10px;
+    position: relative;
+}
+@media (max-width: 576px) {
+    .register{
+        max-width: 370px;
+    }
+}
+.register .continer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.register .continer .logo-container {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-text);
+}
+.register .continer .form {
+    display: flex;
+    flex-direction: column;
+}
+.register .continer .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+.register .continer .form-group .show-hide {
+    position: absolute;
+    right: 15px;
+    top: 70%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+}
+.register .continer .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-text);
+}
+.register .continer .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: var(--color-text);
+}
+.register .continer .form-group input::placeholder {
+    opacity: 0.5;
+}
+.register .continer .form-group input:focus {
+    outline: none;
+    border-color: #1778f2;
+}
+.register .continer .form-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    color: #fff;
+    background-color: #4e6bff;
+    transition: 0.3s;
+    border: none;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin: 12px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+.register .continer .form-submit-btn:hover {
+    background-color: #313131;
+}
+
+.register .continer .link {
+    color: #1778f2 !important;
+    text-decoration: none;
+ 
+}
+
+.register .continer .register-link {
+    align-self: center;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.register .continer .register-link .link {
+    font-weight: 400;
+}
+
+.register .continer .link:hover {
+    text-decoration: underline;
+}
+
+
+/* End register */
+/* shap */
+.shap{
+position: fixed;
+width: 400px;
+height: 400px;
+border-radius: 50px;
+
+background-color: #0093E9;
+background-image: linear-gradient(225deg, #0093E9 0%, #80D0C7 100%);
+
+}
+.shap-1{
+    bottom: -100px;
+    left: -135px;
+    transform: rotate(30deg);
+}
+.shap-2{
+    top: -100px;
+    right: -135px;
+    transform: rotate(30deg);
+}
+ /* Start img */
+.register .continer .icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register .continer .upload{
+    width: 100px;
+    position: relative;
+}
+.register .continer .upload img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #f4f7fa;
+    object-fit: cover;
+}
+body.dark .register .continer .upload img{
+    background-color: #212121;
+}
+.register .continer .upload .round{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #f4f7fa;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    
+}
+body.dark .register .continer .upload .round{
+    background-color: #212121;
+}
+.register .continer .upload .round input[type='file']{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+    cursor: pointer;
+}
+.register .continer .upload .round i{
+    color: #212121;
+    transition: var(--main-transition);
+}
+body.dark .register .continer .upload .round i{
+    color: #f4f7fa;
+}
+.register .continer .upload .round:hover i{
+    color: #79808a;
+}
+  /* End img */
+  /* Start darkmode */
+.dark-light{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    margin: 0 5px;
+}
+.dark-light i{
+    position: absolute;
+    color: var(--color-text);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+/* End darkmode */

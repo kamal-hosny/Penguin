@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IMPORT font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- IMPORT boxicons -->
+    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
+    <!-- IMPORT flaticon -->
+    <link rel="stylesheet" href="./node_modules/@flaticon/flaticon-uicons/css/all/all.css">
+    <!-- IMPORT CSS-bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <!-- IMPORT CSS-Toast Notification -->
+    <link rel="stylesheet" href="./CSS/toast.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/modals.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/loader.css">
+    <link rel="stylesheet" href="./CSS/post-loader.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/profile.css">
+    <!-- ICON -->
+    <link rel="icon" href="./img/penguin.png">
+    <title>Penguin</title>
+</head>
+<body>
+    <!-- Start loader -->
+    <div class="loader">
+        <div class="banter-loader">
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+        </div>
+
+    </div>
+    <!-- End loader -->
+    <!-- Start Toast -->
+    <div class="toast"></div>
+    <!-- Start End -->
+    <!-- Start Detect Internet connection -->
+    <div class="connections"></div>
+    <!-- End Detect Internet connection -->
+       <!-- ====== Start MODALS ====== -->
+       <div id="all-modal"></div>
+
+    <!-- ? End edit-image -->
+       <!-- ====== End MODALS ====== -->
+    <!-- ! ====== Start Post Button ====== -->
+	<!-- <div  id="add-btn" onclick="addBtnClicked()">
+		<i class="bi bi-pencil"></i>
+	</div> -->
+	<!-- ! ====== End Post Button ====== -->
+    <!-- Start header -->
+    <div class="header mine-header" id="header">
+    </div>
+    <!--  End header -->>
+<div class="profile-big" id="profile">
+    <!-- Start header-profile -->
+    <div class="profile-loader">
+        <div class="wrapper">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+            <div class="line-4"></div>
+            <div class="line-5"></div>
+            <div class="line-6"></div>
+            <div class="line-7"></div>
+            <div class="line-8"></div>
+        </div>
+    </div>
+    <!-- End header-profile -->
+</div>
+<!-- Start my-following -->
+<div class="my-following" id="my-following">
+    <div class="container-fluid">
+        <div class="following-header">
+            <p>My Following</p>
+            <button data-bs-toggle="modal" data-bs-target="#seeAllModal">See all</button>
+        </div>
+        <!-- ? Start wrapper -->
+        <div class="wrapper">
+            <i id="left" class="fa-solid fas fa-angle-left arrow"></i>
+      
+            <div class="carousel" id="carousel">
+      
+            
+      
+            </div>
+      
+            <i id="right" class="fa-solid fas fa-angle-right arrow"></i>
+        </div>
+        <!-- ? End wrapper -->
+      </div>
+</div>
+<!-- End my-following -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start contant -->
+<div class="contant">
+    <div class="container">
+ <!-- ? Start posts -->
+ <div class="posts" id="posts">
+    <!-- ! Start post -->
+        <div class="post-loader">
+            <div class="wrapper">
+                <div class="circle"></div>
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+                <div class="line-4"></div>
+                <div class="line-5"></div>
+                <div class="line-6"></div>
+                <div class="line-7"></div>
+                <div class="line-8"></div>
+            </div>
+        </div>
+    <!-- ! End post -->
+</div>
+<!-- ? End posts -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- End contant -->
+    <!-- IMPORT BOOTSTRAP JS -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <!-- IMPORT AXIOS -->
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+       <!-- IMPORT Email-JS -->
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+       <script type="text/javascript">
+           (function(){
+               emailjs.init('SbM6lp_8WtqxEQPLm')
+           })();
+       </script>
+           <script src="./JS/header.js"></script>
+    <!-- IMPORT JS-Toast Notification -->
+    <script src="./JS/toast.js"></script>
+    <!-- IMPORT JS -->
+    <script src="./JS/mainLogic.js"></script>
+    <script src="./JS/loader.js"></script>
+    <script src="./JS/profile.js"></script>
+
+    </body>
+</html>
