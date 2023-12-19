@@ -780,7 +780,9 @@ myBlockList()
 
     if(token == undefined){
         setInterval(notUser , 180000)
-        notUser()
+        
+
+        setTimeout(notUser , 10000)
         
         document.querySelector(".header .right").style.setProperty("position", "relative", "important");
     }

@@ -65,8 +65,6 @@ body {
   background-color: var(--main-background) !important;
   position: relative;
   color: var(--color-text);
-  
-  
 }
 body.dark {
   --main-color: #000;

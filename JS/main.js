@@ -234,7 +234,7 @@ function getPosts(reload = true, page = 1) {
         //
 
       let content = `
-            <div class="post ${friendPost} ${blockPost} ${hidePost}" id="id-${post._id}">
+            <div class="post ${friendPost} ${blockPost} ${hidePost}" id="id-${post._id} ">
             <div class="post-header">
                 <div class="left" onclick="userClicked('${author[0]._id}')">
                     <img src=${postImg} alt="">
